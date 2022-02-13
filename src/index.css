@@ -1,0 +1,199 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bg-clr: #000010;
+  --primary-clr: #262626;
+  --secondary-clr: #e600e6;
+  --gradient: linear-gradient(120deg,var(--primary-clr), var(--secondary-clr));
+  font-family: sans-serif;
+}
+ul{
+  list-style-type: none;
+}
+body{
+  background: var(--bg-clr);
+  color: white;
+}
+header.header {
+  position: sticky;
+  top: -1px;
+  z-index: 3;
+  background: #ccffff;
+  padding: 0 1em;
+  display: block;
+}
+header.header h1 {
+  font-size: 3rem;
+}
+header.header span {
+  color: #66ff66;
+}
+header.header img {
+  display: block;
+  width: 3rem;
+  border: 2px solid #66ff66;
+  border-radius: 6px;
+  transition: all 0.45s ease-in-out;
+}
+header.header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header.header nav {
+  margin-left: auto;
+  display: none;
+}
+header.header ul {
+  display: flex;
+  line-height: 2;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+header.header ul a {
+  color: #66ff66;
+}
+@media (min-width: 600px) {
+  header.header {
+    display: flex;
+  }
+  header.header img {
+    display: none;
+  }
+  header.header nav {
+    display: grid;
+    place-content: center;
+  }
+  header.header ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+.investment h2 {
+  margin: 1rem;
+  text-align: center;
+}
+.investment .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.investment .grid article {
+  color: black;
+  border: 2px solid white;
+  padding: 20px;
+  margin: 5vh 20px;
+  line-height: 2;
+  background: white;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.investment .grid h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--secondary-clr);
+}
+.investment .grid li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0.25em;
+}
+.investment .grid li:nth-child(1) {
+  background: #eee;
+}
+.investment .grid li:nth-child(3) {
+  background: #eee;
+}
+.investment .grid small {
+  color: blue;
+  background-color: pink;
+  padding: 5px;
+}
+.investment button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 1rem;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background: var(--gradient);
+  text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  .investment .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.formheading{
+  text-align: center;
+  margin: 1.5rem;
+}
+.themainform{
+  display: grid;
+  place-content: center;
+}
+.theform{
+  color: black;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 350px;
+  margin-bottom: 2rem;
+}
+.theform h2{
+  background: linear-gradient(120deg, #262626, #e600e6);
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+.theform label{
+  font-size: larger;
+  margin-left: .5rem;
+  padding: 1rem, 0px;
+  color: #e600e6;
+}
+.theform input{
+  min-height: 2.5rem;
+  width: calc(100% - 1rem);
+  margin: 0px 0.5rem 20px 0.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #262626;
+  color: #262626;
+}
+.theform button{
+  font-size: 1.25rem;
+  margin-left: .5rem;
+  padding: .5em 1.125em;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(120deg, #262626, #e600e6);
+  color: #000;
+}
+.theform footer{
+  padding: 1rem;
+  line-height: 3;
+  text-align: center;
+}
+footer.footer {
+  padding: 1rem;
+  overflow: hidden;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+}
+footer.footer .logo {
+  text-align: center;
+}
+footer.footer .container {
+  max-width: 700px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
